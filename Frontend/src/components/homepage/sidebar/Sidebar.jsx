@@ -9,9 +9,7 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const activeComponent = useSelector((store) => store.user.activeComponent);
   useEffect(() => {
-    console.log("component mount");
     return () => {
-      console.log("component unmount");
       dispatch(setSelectedConversation(null));
     };
   }, []);
